@@ -2,11 +2,15 @@ package org.example.entities;
 
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.PositiveOrZero;
+import lombok.Builder;
+import lombok.Data;
 
-import java.util.List;
 
 @Entity
 @Table(name = "PRODUCT")
+@Builder
+@Data
 public class Product {
 
     @Id
@@ -26,6 +30,7 @@ public class Product {
     private double price;
 
     @Column(name = "STOCK_QUANTITY")
+    @PositiveOrZero
     private int stockQuantity;
 
     @Column(name = "STATUS")
@@ -34,7 +39,6 @@ public class Product {
     @Column(name = "CATAGORY_ID")
     private int catagoryId;
 
-    //TODO: Mapping to be done
 
 }
 

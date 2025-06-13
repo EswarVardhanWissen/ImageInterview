@@ -23,6 +23,8 @@ public class Catagory {
     @Column(name = "ACTIVE_STATUS")
     private Boolean activeStatus;
 
-
+    @ManyToOne
+    @JoinColumn(name = "CATAGORY_ID", nullable = false)
+    private Catagory catagory;
 
 }

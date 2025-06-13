@@ -19,6 +19,8 @@ dependencies {
     implementation("com.h2database:h2:2.2.224")
     runtimeOnly("org.projectlombok:lombok:1.18.30") // Add Lombok for runtime
     annotationProcessor("org.projectlombok:lombok:1.18.30")
+    implementation("jakarta.validation:jakarta.validation-api:3.0.2")
+    annotationProcessor("jakarta.validation:jakarta.validation-api:3.0.2")
 
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")

@@ -3,13 +3,10 @@ package org.example.entities;
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
 @Entity
 @Table(name ="CATAGORY")
-@Getter
-@Setter
+@Data
 @Builder
 public class Catagory {
 

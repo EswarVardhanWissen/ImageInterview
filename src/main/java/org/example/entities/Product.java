@@ -3,14 +3,18 @@ package org.example.entities;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.PositiveOrZero;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 
 @Entity
 @Table(name = "PRODUCT")
 @Builder
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Product {
 
     @Id
@@ -36,8 +40,12 @@ public class Product {
     @Column(name = "STATUS")
     private int status;
 
-    @Column(name = "CATAGORY_ID")
-    private int catagoryId;
+    @Column(name = "CATAGORY_ID", nullable = false)
+    private Integer catagoryId;
+
+    @ManyToOne
+    @JoinColumn(name = "CATAGORY_ID", insertable = false, updatable = false, nullable = false)
+    private Catagory catagory;
 
 
 }

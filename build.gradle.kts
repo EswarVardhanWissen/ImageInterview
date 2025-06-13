@@ -21,7 +21,8 @@ dependencies {
     annotationProcessor("org.projectlombok:lombok:1.18.30")
     implementation("jakarta.validation:jakarta.validation-api:3.0.2")
     annotationProcessor("jakarta.validation:jakarta.validation-api:3.0.2")
-
+    implementation("org.apache.poi:poi:5.2.3")
+    implementation("org.apache.poi:poi-ooxml:5.2.3")
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
     testImplementation("org.springframework.boot:spring-boot-starter-test")

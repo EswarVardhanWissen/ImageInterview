@@ -34,13 +34,13 @@ public class ProductController {
     @PostMapping("")
     public ResponseEntity<String> createCatagory(@RequestBody Product product) {
         Product newProduct = Product.builder()
-                .catagoryId(product.getCatagoryId())
                 .skuCode(product.getSkuCode())
                 .productName(product.getProductName())
                 .description(product.getDescription())
                 .price(product.getPrice())
                 .stockQuantity(product.getStockQuantity())
                 .status(product.getStatus())
+                .catagoryId(product.getCatagoryId())
                 .build();
         productRepository.save(newProduct);
         return ResponseEntity.ok("Success");

@@ -1,13 +1,17 @@
 package org.example.entities;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name ="CATAGORY")
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Catagory {
 
     @Id
@@ -23,8 +27,5 @@ public class Catagory {
     @Column(name = "ACTIVE_STATUS")
     private Boolean activeStatus;
 
-    @ManyToOne
-    @JoinColumn(name = "CATAGORY_ID", nullable = false)
-    private Catagory catagory;
 
 }
